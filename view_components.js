@@ -408,6 +408,8 @@ TODO: make current available semantics selectable via attributes
 */
 
 
+const thumbUrl = new URL('./thumb.svg', new URL(import.meta.url));
+
 export class SliderView extends BaseElement {
   static style = `
 
@@ -487,7 +489,7 @@ export class SliderView extends BaseElement {
       transform: translate(-50%, -50%);
       width: 25px;
       height: 50px;
-      background: url("components/thumb.svg") no-repeat center center;
+      background: url('${thumbUrl.href}') no-repeat center center;
       background-size: 100% 100%;
       cursor: grab;
       touch-action: none;
